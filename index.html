@@ -9,18 +9,8 @@
   <!-- Website JavaScript -->
   <script src="script.js"></script>
 
-  <!-- Olvy Survey Widget Integration -->
+  <!-- Olvy Widget Integration -->
   <script>
-    window.onload = function() {
-	  //olvy user identification
-      OlvyUtils.setUser("ritesholvytestworkspace", {
-		  name: "Bruce Banner",
-		  email: "bruce.banner.049@mailinator.com",
-		  identifier: "88832787346",
-		  designation: "Research Scientist",
-      signup_date: "04-12-2026" // YYYY-MM-DD format
-	  })
-    };
     var OlvyConfig = {
       workspaceAlias: "ritesholvytestworkspace"
     };
@@ -226,26 +216,5 @@
     aria-label="Open IronCore Fitness feedback survey">
     Share Your Feedback
   </button>
-
-  <script>
-    (function () {
-      var surveyButton = document.getElementById("olvy-share-feedback");
-      var workspaceAlias = "ritesholvytestworkspace";
-      var widgetId = "clever_shaw_DkNlV";
-
-      surveyButton.addEventListener("click", function () {
-        if (
-          window.OlvyUtils &&
-          typeof window.OlvyUtils.showWidget === "function"
-        ) {
-          window.OlvyUtils.showWidget(workspaceAlias, widgetId);
-        } else {
-          console.error(
-            "Olvy Survey is not ready. Check scriptV3.js loading and network errors."
-          );
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
