@@ -35,10 +35,12 @@ year.textContent = new Date().getFullYear();
     };
     (function () {
       var surveyButton = document.getElementById("olvy-share-feedback");
+      var changelogButton = document.querySelector("#olvy-whats-new");
       var workspaceAlias = "ritesholvytestworkspace";
-      var widgetId = "busy_sanderson_OVIog";
+      var widgetId = "cool_hugle_QdDqo";
+      var changelogWidgetId = "busy_sanderson_OVIog";
 
-      surveyButton.addEventListener("click", function () {
+      function showWidget(widgetId) {
         if (
           window.OlvyUtils &&
           typeof window.OlvyUtils.showWidget === "function"
@@ -46,8 +48,16 @@ year.textContent = new Date().getFullYear();
           window.OlvyUtils.showWidget(workspaceAlias, widgetId);
         } else {
           console.error(
-            "Olvy Survey is not ready. Check scriptV3.js loading and network errors."
+            "Olvy is not ready. Check scriptV3.js loading and network errors."
           );
         }
+      }
+
+      surveyButton.addEventListener("click", function () {
+        showWidget(widgetId);
+      });
+
+      changelogButton.addEventListener("click", function () {
+        showWidget(changelogWidgetId);
       });
     })();

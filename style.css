@@ -32,6 +32,12 @@ body {
   margin: 0 auto;
 }
 
+.olvy-embed-container {
+  width: min(100%, 760px);
+  height: 560px;
+  margin: 0 auto;
+}
+
 .header {
   background: rgba(16, 16, 16, 0.96);
   border-bottom: 1px solid var(--border);
@@ -428,6 +434,10 @@ h1 {
     padding: 60px 0;
   }
 
+  .olvy-embed-container {
+    height: 480px;
+  }
+
   .cards,
   .stats {
     grid-template-columns: 1fr;
@@ -478,6 +488,10 @@ h1 {
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
+    .changelog-launcher {
+      bottom: 84px;
+    }
+
     .survey-launcher:hover {
       transform: translateY(-3px);
       box-shadow: 0 9px 26px rgba(0, 0, 0, 0.28);
@@ -498,5 +512,9 @@ h1 {
         bottom: 16px;
         padding: 12px 18px;
         font-size: 14px;
+      }
+
+      .changelog-launcher {
+        bottom: 76px;
       }
     }

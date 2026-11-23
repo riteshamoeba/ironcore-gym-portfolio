@@ -7,7 +7,7 @@
   <title>IronCore Fitness | Gym Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Website JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
   <!-- Olvy Widget Integration -->
   <script>
@@ -199,6 +199,14 @@
         </form>
       </div>
     </section>
+
+    <section class="section container" aria-label="Latest updates">
+      <div class="section-heading center">
+        <h2>EMBEDDED <span>ANNOUNCEMENT WIDGET</span></h2>
+      </div>
+      <!-- Set the embedded Olvy widget target to #olvy-inline-widget. -->
+      <div id="olvy-inline-widget" class="olvy-embed-container"></div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -215,6 +223,13 @@
     class="survey-launcher"
     aria-label="Open IronCore Fitness feedback survey">
     Share Your Feedback
+  </button>
+  <button
+    type="button"
+    id="olvy-whats-new"
+    class="survey-launcher changelog-launcher"
+    aria-label="Open IronCore Fitness changelog">
+    View Changelog
   </button>
 </body>
 </html>
