@@ -6,9 +6,21 @@
   <meta name="description" content="IronCore Fitness - Build strength, confidence, and consistency." />
   <title>IronCore Fitness | Gym Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Website JavaScript -->
+  <script src="script.js"></script>
 
   <!-- Olvy Survey Widget Integration -->
   <script>
+    window.onload = function() {
+	  //olvy user identification
+      OlvyUtils.setUser("ritesholvytestworkspace", {
+		  name: "Bruce Banner",
+		  email: "bruce.banner.049@mailinator.com",
+		  identifier: "88832787346",
+		  designation: "Research Scientist",
+      signup_date: "04-12-2026" // YYYY-MM-DD format
+	  })
+    };
     var OlvyConfig = {
       workspaceAlias: "ritesholvytestworkspace"
     };
@@ -17,54 +29,23 @@
     type="text/javascript"
     src="https://staging.olvy.co/scriptV3.js"
     defer>
-  </script>
+  </script> 
 
-  <!-- Survey launcher button styling -->
-  <style>
-    .survey-launcher {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 9998;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 22px;
-      border: none;
-      border-radius: 999px;
-      background: #d7ff3f;
-      color: #111111;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .survey-launcher:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 9px 26px rgba(0, 0, 0, 0.28);
-    }
-
-    .survey-launcher:focus-visible {
-      outline: 3px solid #ffffff;
-      outline-offset: 4px;
-    }
-
-    .survey-launcher:active {
-      transform: translateY(0);
-    }
-
-    @media (max-width: 480px) {
-      .survey-launcher {
-        right: 16px;
-        bottom: 16px;
-        padding: 12px 18px;
-        font-size: 14px;
+  <!-- Olvy Messenger Integration -->
+  <script>
+    var OlvyMessengerConfig = {
+      workspaceAlias: "ritesholvytestworkspace",
+      messengerId: "ba75dd3f-0630-43ff-ac87-bc0d7685b688",
+      user: {
+        name: "Elena Zhang",
+        email: "elena.zhang.050@mailinator.com",
+        identifier: "contact-1",
+        designation: "Research Analyst"
       }
-    }
-  </style>
+    };
+  </script>
+  <script src="https://staging.olvy.co/messenger.js" defer></script>
+
 </head>
 
 <body>
@@ -237,31 +218,12 @@
     </div>
   </footer>
 
-  <!-- Existing website JavaScript -->
-  <script src="script.js"></script>
-
-  <!-- Olvy Messenger Integration: existing configuration retained -->
-  <script>
-    var OlvyMessengerConfig = {
-      workspaceAlias: "ritesholvytestworkspace",
-      messengerId: "ba75dd3f-0630-43ff-ac87-bc0d7685b688",
-      user: {
-        name: "Elena Zhang",
-        email: "elena.zhang.050@mailinator.com",
-        identifier: "contact-1",
-        designation: "Research Analyst"
-      }
-    };
-  </script>
-  <script src="https://staging.olvy.co/messenger.js" defer></script>
-
   <!-- Basic Survey launcher -->
   <button
     type="button"
     id="olvy-share-feedback"
     class="survey-launcher"
     aria-label="Open IronCore Fitness feedback survey">
-    <span aria-hidden="true">✦</span>
     Share Your Feedback
   </button>
 

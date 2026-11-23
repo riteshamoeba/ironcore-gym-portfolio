@@ -455,3 +455,48 @@ h1 {
 .survey-launcher:hover {
   background-color: #ea580c;
 }
+
+/* Survey launcher button styling */
+    .survey-launcher {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 9998;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 999px;
+      background: #d7ff3f;
+      color: #111111;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .survey-launcher:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 26px rgba(0, 0, 0, 0.28);
+    }
+
+    .survey-launcher:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 4px;
+    }
+
+    .survey-launcher:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .survey-launcher {
+        right: 16px;
+        bottom: 16px;
+        padding: 12px 18px;
+        font-size: 14px;
+      }
+    }
